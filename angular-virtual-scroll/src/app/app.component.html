@@ -1,0 +1,27 @@
+<div style="text-align:center">
+  <h1>
+    Virtual Scroll en Angular
+  </h1>
+</div>
+
+<div class="resultados">
+
+  <!-- Listado tradicional -->
+  <div>
+    <h2>Listado tradicional</h2>
+    <div class="listado">
+      <div *ngFor="let item of items">Ítem {{item}}</div>
+    </div>
+  </div>
+
+  <!-- Listado con Virtual Scroll -->
+
+  <div>
+    <h2>Listado con Virtual Scroll</h2>
+    <cdk-virtual-scroll-viewport itemSize="50">
+      <div *cdkVirtualFor="let item of items">
+        Ítem {{item}}
+      </div>
+    </cdk-virtual-scroll-viewport>
+  </div>
+</div>
